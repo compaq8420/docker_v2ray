@@ -1,5 +1,6 @@
 #!/usr/bin/env bash
-git clone https://github.com/NoOne-hub/v2ray_client v2ray_client/
+#git clone https://github.com/NoOne-hub/v2ray_client v2ray_client/
+git clone https://github.com/compaq8420/v2ray_client v2ray_client/
 
 echo "请输入面板用户名(默认为NoOne-hub)"
 read user
@@ -24,4 +25,4 @@ SHELL_FOLDER=$(cd "$(dirname "$0")";pwd)
 docker run -d --restart=always --name v2ray \
   -v $SHELL_FOLDER/v2ray_client/config/v2ray/:/etc/v2ray \
   -v $SHELL_FOLDER/v2ray_client/app.db:/home/NoOne-hub/v2ray/app.db \
-  -p 10808:10808 -p 10809:10809 -p 8000:8000 v2ray
+  -p 1080:10808 -p 10809:10809 -p 8000:8000 v2ray
